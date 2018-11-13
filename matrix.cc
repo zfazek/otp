@@ -95,12 +95,10 @@ int getY(int i) {
 }
 
 int main() {
-    int idx = 79;
-    while (idx < N * N) {
+    for (int idx = 79; idx < N * N; idx += 103) {
         const int x = getX(idx);
         const int y = getY(idx);
         cout << matrix[x + y * N];
-        idx += 103;
     }
     cout << endl;
 }
