@@ -59,38 +59,38 @@ string matrix =
 const int N = 50;
 
 int getX(int i) {
-    int c = 0;
-    int n = N - 1;
+    int number_of_spirals = 0;
+    int length = N - 1;
 
     while (true) {
-        if (i < n) return i + c;
-        i = i - n;
-        if (i < n) return N - 1 - c;
-        i = i - n;
-        if (i < n) return N - 1 - i - c;
-        i = i - n;
-        if (i < n) return c;
-        i = i - n;
-        c++;
-        n = n - 2;
+        if (i < length) return i + number_of_spirals;
+        i = i - length;
+        if (i < length) return N - 1 - number_of_spirals;
+        i = i - length;
+        if (i < length) return N - 1 - i - number_of_spirals;
+        i = i - length;
+        if (i < length) return number_of_spirals;
+        i = i - length;
+        number_of_spirals++;
+        length = length - 2;
     }
 }
 
 int getY(int i) {
-    int c = 0;
-    int n = N - 1;
+    int number_of_spirals = 0;
+    int length = N - 1;
 
     while (true) {
-        if (i < n) return c;
-        i = i - n;
-        if (i < n) return i + c;
-        i = i - n;
-        if (i < n) return N - 1 - c;
-        i = i - n;
-        if (i < n) return N - 1 - i - c;
-        i = i - n;
-        c++;
-        n = n - 2;
+        if (i < length) return number_of_spirals;
+        i = i - length;
+        if (i < length) return i + number_of_spirals;
+        i = i - length;
+        if (i < length) return N - 1 - number_of_spirals;
+        i = i - length;
+        if (i < length) return N - 1 - i - number_of_spirals;
+        i = i - length;
+        number_of_spirals++;
+        length = length - 2;
     }
 }
 
